@@ -1,0 +1,20 @@
+package demo;
+
+unit SimpleDTUnit; 
+
+// TODO if omitting ; will break
+rule R1
+when
+    /age[this < 21];
+    /incidents[this == false]
+then
+    basePrice.set( 800 );
+end
+
+rule R2
+when
+    /age[this < 21];
+    /incidents[this == true]
+then
+    basePrice.set( 1000 );
+end
